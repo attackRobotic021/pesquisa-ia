@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesquisa sobre o uso de Inteligência Artificial</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <!-- TELA INICIAL -->
+        <section id="inicio" class="tela ativa">
+
+            <div class="icone">🤖</div>
+
+            <h1>Uso da Inteligência Artificial nas Instituições de Ensino</h1>
+
+            <p class="subtitulo">
+                Bem-vindo à nossa pesquisa!
+            </p>
+
+            <p class="descricao">
+                Esta pesquisa faz parte de um projeto de extensão na área de
+                Ciência da Computação e tem como objetivo compreender como os
+                estudantes utilizam ferramentas de Inteligência Artificial
+                durante sua formação acadêmica.
+            </p>
+
+            <p class="descricao">
+                Queremos conhecer sua opinião sobre o uso dessas tecnologias,
+                seus possíveis impactos no aprendizado e o que poderia ser
+                feito para evitar o uso excessivo de Inteligência Artificial.
+            </p>
+
+            <button onclick="comecarPesquisa()">
+                Começar pesquisa
+            </button>
+
+        </section>
+
+
+        <!-- PESQUISA -->
+        <section id="pesquisa" class="tela">
+
+            <div class="progresso">
+                <div id="barraProgresso"></div>
+            </div>
+
+            <p id="contador">Pergunta 1 de 5</p>
+
+            <!-- PERGUNTA 1 -->
+            <div class="pergunta ativa-pergunta" id="pergunta1">
+
+                <h2>
+                    Com que frequência você utiliza ferramentas de Inteligência
+                    Artificial para atividades relacionadas à faculdade?
+                </h2>
+
+                <div class="opcoes">
+
+                    <label>
+                        <input type="radio" name="q1" value="Sempre">
+                        <span>Sempre</span>
+                    </label>
+
+                    <label>
+                        <input type="radio" name="q1" value="Frequentemente">
+                        <span>Frequentemente</span>
+                    </label>
+
+                    <label>
+                        <input type="radio" name="q1" value="Às vezes">
+                        <span>Às vezes</span>
+                    </label>
+
+                    <label>
+                        <input type="radio" name="q1" value="Raramente">
+                        <span>Raramente</span>
+                    </label>
+
+                    <label>
+                        <input type="radio" name="q1" value="Nunca">
+                        <span>Nunca</span>
+                    </label>
+
+                </div>
+
+            </div>
+
+
+            <!-- PERGUNTA 2 -->
+            <div class="pergunta" id="pergunta2">
+
+                <h2>
+                    Você considera que o uso excessivo de Inteligência Artificial
+                    pode prejudicar o aprendizado dos estudantes?
+                </h2>
+
+                <div class="opcoes">
+
+                    <label>
+                        <input type="radio" name="q2" value="Sim">
+                        <span>Sim</span>
+                    </label>
+
+                    <label>
+                        <input type="radio" name="q2" value="Não">
+                        <span>Não</span>
+                    </label>
+
+                </div>
+
+                <textarea
+                    id="justificativa2"
+                    placeholder="Por quê? Justifique sua resposta..."
+                ></textarea>
+
+            </div>
+
+
+            <!-- PERGUNTA 3 -->
+            <div class="pergunta" id="pergunta3">
+
+                <h2>
+                    Na sua opinião, o que poderia ser feito pelas instituições
+                    de ensino para diminuir o uso excessivo de Inteligência
+                    Artificial pelos estudantes?
+                </h2>
+
+                <textarea
+                    id="resposta3"
+                    placeholder="Digite sua resposta..."
+                ></textarea>
+
+            </div>
+
+
+            <!-- PERGUNTA 4 -->
+            <div class="pergunta" id="pergunta4">
+
+                <h2>
+                    Você acredita que o uso excessivo de Inteligência Artificial
+                    pode fazer com que o estudante deixe de desenvolver
+                    habilidades importantes, como raciocínio, criatividade e
+                    capacidade de resolver problemas sozinho?
+                </h2>
+
+                <div class="opcoes">
+
+                    <label>
+                        <input type="radio" name="q4" value="Sim">
+                        <span>Sim</span>
+                    </label>
+
+                    <label>
+                        <input type="radio" name="q4" value="Não">
+                        <span>Não</span>
+                    </label>
+
+                </div>
+
+                <textarea
+                    id="justificativa4"
+                    placeholder="Por quê? Justifique sua resposta..."
+                ></textarea>
+
+            </div>
+
+
+            <!-- PERGUNTA 5 -->
+            <div class="pergunta" id="pergunta5">
+
+                <h2>
+                    Você acha que conseguiria realizar um trabalho completo
+                    da faculdade sem utilizar nenhuma ferramenta de
+                    Inteligência Artificial?
+                </h2>
+
+                <div class="opcoes">
+
+                    <label>
+                        <input type="radio" name="q5" value="Sim">
+                        <span>Sim</span>
+                    </label>
+
+                    <label>
+                        <input type="radio" name="q5" value="Não">
+                        <span>Não</span>
+                    </label>
+
+                </div>
+
+                <textarea
+                    id="justificativa5"
+                    placeholder="Por quê? Justifique sua resposta..."
+                ></textarea>
+
+            </div>
+
+
+            <div class="botoes">
+
+                <button
+                    id="voltar"
+                    class="botao-secundario"
+                    onclick="voltarPergunta()"
+                >
+                    Voltar
+                </button>
+
+                <button
+                    id="proximo"
+                    onclick="proximaPergunta()"
+                >
+                    Próxima
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- TELA FINAL -->
+        <section id="final" class="tela">
+
+            <div class="check">✓</div>
+
+            <h1>Obrigado por ajudar nossa pesquisa!</h1>
+
+            <p class="descricao">
+                Sua participação é muito importante para o desenvolvimento
+                deste projeto.
+            </p>
+
+            <p class="descricao">
+                Suas respostas contribuirão para entendermos melhor a relação
+                entre os estudantes e o uso da Inteligência Artificial no
+                ambiente acadêmico.
+            </p>
+
+            <button onclick="voltarInicio()">
+                Voltar ao início
+            </button>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

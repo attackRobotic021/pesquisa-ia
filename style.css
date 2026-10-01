@@ -1,0 +1,398 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+
+    background:
+        linear-gradient(135deg, #0b1f33, #163b5c, #1e4f73);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #eaf4ff;
+
+    padding: 20px;
+}
+
+
+.container {
+    width: 100%;
+    max-width: 850px;
+}
+
+
+/* TELAS */
+
+.tela {
+    display: none;
+
+    background: rgba(16, 34, 51, 0.96);
+
+    border: 1px solid rgba(120, 180, 220, 0.25);
+
+    border-radius: 20px;
+
+    padding: 45px;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.35);
+
+    animation: aparecer 0.4s ease;
+}
+
+.tela.ativa {
+    display: block;
+}
+
+
+@keyframes aparecer {
+
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* TELA INICIAL */
+
+.icone {
+    width: 75px;
+    height: 75px;
+
+    background: #1d5d89;
+
+    border-radius: 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 35px;
+
+    margin-bottom: 25px;
+}
+
+
+h1 {
+    font-size: 34px;
+    line-height: 1.2;
+
+    margin-bottom: 20px;
+}
+
+
+.subtitulo {
+    color: #74b9ed;
+
+    font-size: 21px;
+
+    font-weight: bold;
+
+    margin-bottom: 18px;
+}
+
+
+.descricao {
+    color: #b9cbd9;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+
+    margin-bottom: 18px;
+}
+
+
+/* BOTÕES */
+
+button {
+    border: none;
+
+    background: #287bb5;
+
+    color: white;
+
+    padding: 14px 28px;
+
+    border-radius: 10px;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+
+    margin-top: 15px;
+}
+
+
+button:hover {
+    background: #3695d2;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 8px 20px rgba(35, 139, 202, 0.25);
+}
+
+
+/* PESQUISA */
+
+.progresso {
+    width: 100%;
+
+    height: 7px;
+
+    background: #263c4e;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    margin-bottom: 20px;
+}
+
+
+#barraProgresso {
+    width: 20%;
+
+    height: 100%;
+
+    background: #3c9bd1;
+
+    transition: 0.3s;
+}
+
+
+#contador {
+    color: #79bce7;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    margin-bottom: 25px;
+}
+
+
+.pergunta {
+    display: none;
+
+    animation: aparecer 0.3s ease;
+}
+
+
+.pergunta.ativa-pergunta {
+    display: block;
+}
+
+
+h2 {
+    font-size: 23px;
+
+    line-height: 1.45;
+
+    margin-bottom: 28px;
+}
+
+
+/* OPÇÕES */
+
+.opcoes {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+
+.opcoes label {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    background: #1c3347;
+
+    border: 1px solid #2c4c64;
+
+    border-radius: 10px;
+
+    padding: 15px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.opcoes label:hover {
+    background: #25465f;
+
+    border-color: #438fbd;
+}
+
+
+.opcoes input {
+    accent-color: #3d9bd1;
+
+    width: 18px;
+
+    height: 18px;
+}
+
+
+.opcoes span {
+    font-size: 16px;
+}
+
+
+/* TEXTAREA */
+
+textarea {
+    width: 100%;
+
+    min-height: 130px;
+
+    resize: vertical;
+
+    margin-top: 22px;
+
+    padding: 15px;
+
+    border-radius: 10px;
+
+    border: 1px solid #34566e;
+
+    background: #152b3d;
+
+    color: white;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 15px;
+
+    outline: none;
+}
+
+
+textarea:focus {
+    border-color: #4ba6da;
+
+    box-shadow: 0 0 0 2px rgba(75, 166, 218, 0.15);
+}
+
+
+textarea::placeholder {
+    color: #8298a9;
+}
+
+
+/* BOTÕES DA PESQUISA */
+
+.botoes {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-top: 30px;
+}
+
+
+.botao-secundario {
+    background: #344b5c;
+}
+
+
+.botao-secundario:hover {
+    background: #456477;
+}
+
+
+/* TELA FINAL */
+
+#final {
+    text-align: center;
+}
+
+
+.check {
+    width: 80px;
+    height: 80px;
+
+    margin: 0 auto 25px;
+
+    background: #1d6b8e;
+
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 45px;
+
+    color: #bce8ff;
+}
+
+
+#final h1 {
+    color: #eaf7ff;
+}
+
+
+/* CELULAR */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 12px;
+    }
+
+    .tela {
+        padding: 28px 22px;
+
+        border-radius: 15px;
+    }
+
+    h1 {
+        font-size: 27px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .descricao {
+        font-size: 15px;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    .botoes {
+        gap: 10px;
+    }
+
+    .botoes button {
+        width: 50%;
+    }
+
+}
